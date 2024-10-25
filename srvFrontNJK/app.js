@@ -36,7 +36,10 @@ app.get('/api/salasdeaula', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  res.render('index.njk', { salas: salasdeaula });
+  res.render('index.njk');
+});
+app.get('/salasdeaula', (req, res) => {
+  res.render('manutSalaDeAula.njk', { salas : salasdeaula });
 });
 
 app.listen(2600, () => console.log('Servidor Nunjucks rodando na porta 2600'));

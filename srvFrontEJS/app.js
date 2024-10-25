@@ -33,7 +33,10 @@ app.get('/api/salasdeaula', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  res.render('index', { salas: salasdeaula });
+  res.render('index');
+});
+app.get('/salasdeaula', (req, res) => {
+  res.render('manutSalaDeAula', { salas: salasdeaula });
 });
 
 app.listen(2500, () => console.log('Servidor EJS rodando na porta 2500'));
